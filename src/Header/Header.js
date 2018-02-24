@@ -5,9 +5,9 @@ import './Header.css';
 class Header extends Component {
   render() {
     return (
-      <header className="jsf-header">
-        <img src={logo} className="jsf-header-logo" alt="logo" />
-        <h1 className="jsf-header-title">{this.props.title}</h1>
+      <header className="rp-header">
+        <img src={logo} className="rp-header-logo" alt="logo" />
+        <h1 className="rp-header-title">{this.props.title}</h1>
       </header>
     );
   }
