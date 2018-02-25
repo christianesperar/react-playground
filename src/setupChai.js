@@ -3,4 +3,4 @@ import chaiEnzyme from 'chai-enzyme';
 
 chai.use(chaiEnzyme());
 
-export const expect = chai.expect;
+export const { expect } = chai;

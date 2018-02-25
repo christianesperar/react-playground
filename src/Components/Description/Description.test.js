@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { expect } from './../../utils/chai';
+import { expect } from './../../setupChai';
 import Description from './Description';
 
 it('should show the description', () => {

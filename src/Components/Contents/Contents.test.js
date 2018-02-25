@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { expect } from './../../utils/chai';
 import { MemoryRouter } from 'react-router-dom';
+import { expect } from './../../setupChai';
 import Content from './Contents';
 
 it('should render router', () => {
@@ -19,11 +19,10 @@ it('should render router', () => {
     </MemoryRouter>
   ));
 
-  const title = wrapper.find('li a').text();
-  const href = wrapper.find('li a').prop('href');
+  const link = wrapper.find('li a');
 
-  expect(title).to.equal('Counter');
-  expect(href).to.equal('/counter');
+  expect(link.text()).to.equal('Counter');
+  expect(link.prop('href')).to.equal('/counter');
 });
 
 it('should render href', () => {
@@ -35,11 +34,10 @@ it('should render href', () => {
   ];
 
   const wrapper = mount(<Content routes={routes} />);
-  const title = wrapper.find('li a').text();
-  const href = wrapper.find('li a').prop('href');
+  const link = wrapper.find('li a');
 
-  expect(title).to.equal('ReactJS Tutorial For Beginners 2017 From Scratch');
-  expect(href).to.equal('https://appdividend.com/2017/08/22/reactjs-tutorial-beginners-2017/');
+  expect(link.text()).to.equal('ReactJS Tutorial For Beginners 2017 From Scratch');
+  expect(link.prop('href')).to.equal('https://appdividend.com/2017/08/22/reactjs-tutorial-beginners-2017/');
 });
 
 it('should have 2 links', () => {
