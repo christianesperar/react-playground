@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Header from './Components/Header/Header';
-import Description from './Components/Description/Description';
+import Home from './Pages/Home';
 import './App.css';
 
 class App extends Component {
@@ -8,7 +9,12 @@ class App extends Component {
     return (
       <div className="rp">
         <Header title="Welcome to React Playground" />
-        <Description description="My personal playground while learning React" />
+
+        <Router>
+          <div className="rp-container">
+            <Route exact path="/" component={Home} />
+          </div>
+        </Router>
       </div>
     );
   }
