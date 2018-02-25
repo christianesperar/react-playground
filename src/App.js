@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from './Components/Header/Header';
+import Description from './Components/Description/Description';
 import './App.css';
 
 class App extends Component {
@@ -7,9 +8,7 @@ class App extends Component {
     return (
       <div className="rp">
         <Header title="Welcome to React Playground" />
-        <p className="rp-intro">
-          My personal playground while learning React
-        </p>
+        <Description description="My personal playground while learning React" />
       </div>
     );
   }
