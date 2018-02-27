@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import { expect } from './../../setupChai';
-import Description from './Description';
+import Description from './../../Components/Description/Description';
 
 it('should show the description', () => {
   const wrapper = mount(<Description description="My personal playground while learning React" />);

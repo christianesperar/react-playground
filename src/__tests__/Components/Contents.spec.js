@@ -2,7 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import { MemoryRouter } from 'react-router-dom';
 import { expect } from './../../setupChai';
-import Content from './Contents';
+import Contents from './../../Components/Contents/Contents';
 
 it('should have the correct data if path', () => {
   const routes = [
@@ -16,7 +16,7 @@ it('should have the correct data if path', () => {
 
   const wrapper = mount((
     <MemoryRouter>
-      <Content routes={routes} />
+      <Contents routes={routes} />
     </MemoryRouter>
   ));
 
@@ -34,7 +34,7 @@ it('should have the correct data if href', () => {
     },
   ];
 
-  const wrapper = mount(<Content routes={routes} />);
+  const wrapper = mount(<Contents routes={routes} />);
   const link = wrapper.find('li a');
 
   expect(link.text()).to.equal('ReactJS Tutorial For Beginners 2017 From Scratch');
@@ -57,7 +57,7 @@ it('should have correct data for combined path and href', () => {
 
   const wrapper = mount((
     <MemoryRouter>
-      <Content routes={routes} />
+      <Contents routes={routes} />
     </MemoryRouter>
   ));
   const path = wrapper.find('li a').at(0);
