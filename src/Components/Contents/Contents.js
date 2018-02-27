@@ -9,10 +9,10 @@ class Contents extends Component {
           (
             <li key={btoa(route.title)}>
               {/* Routes */}
-              {route.path && <Link to={route.path}>{route.title}</Link>}
+              {route.component && <Link to={route.url}>{route.title}</Link>}
 
               {/* External URL */}
-              {route.url && <a href={route.url} target="_blank">{route.title}</a>}
+              {!route.component && <a href={route.url} target="_blank">{route.title}</a>}
             </li>
           ))
         }

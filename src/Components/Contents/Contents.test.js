@@ -4,12 +4,13 @@ import { MemoryRouter } from 'react-router-dom';
 import { expect } from './../../setupChai';
 import Content from './Contents';
 
-it('should render router', () => {
+it('should have the correct data if path', () => {
   const routes = [
     {
       title: 'Counter',
-      path: '/counter',
+      url: '/counter',
       component: 'Counter',
+      path: './Pages/Counter',
     },
   ];
 
@@ -25,7 +26,7 @@ it('should render router', () => {
   expect(link.prop('href')).to.equal('/counter');
 });
 
-it('should render href', () => {
+it('should have the correct data if href', () => {
   const routes = [
     {
       title: 'ReactJS Tutorial For Beginners 2017 From Scratch',
@@ -40,12 +41,13 @@ it('should render href', () => {
   expect(link.prop('href')).to.equal('https://appdividend.com/2017/08/22/reactjs-tutorial-beginners-2017/');
 });
 
-it('should have 2 links', () => {
+it('should have correct data for combined path and href', () => {
   const routes = [
     {
       title: 'Counter',
-      path: '/counter',
+      url: '/counter',
       component: 'Counter',
+      path: './Pages/Counter',
     },
     {
       title: 'ReactJS Tutorial For Beginners 2017 From Scratch',
@@ -58,6 +60,14 @@ it('should have 2 links', () => {
       <Content routes={routes} />
     </MemoryRouter>
   ));
+  const path = wrapper.find('li a').at(0);
+  const link = wrapper.find('li a').at(1);
 
-  expect(wrapper.find('li')).to.have.length(2);
+  expect(wrapper.find('li a')).to.have.length(2);
+
+  expect(path.text()).to.equal('Counter');
+  expect(path.prop('href')).to.equal('/counter');
+
+  expect(link.text()).to.equal('ReactJS Tutorial For Beginners 2017 From Scratch');
+  expect(link.prop('href')).to.equal('https://appdividend.com/2017/08/22/reactjs-tutorial-beginners-2017/');
 });
