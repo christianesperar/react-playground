@@ -1,0 +1,16 @@
+{
+  "exercises": [
+    {
+      "title": "Counter",
+      "url": "/counter",
+      "component": "Counter",
+      "path": "./Pages/Counter"
+    }
+  ],
+  "tutorials": [
+    {
+      "title": "ReactJS Tutorial For Beginners 2017 From Scratch",
+      "url": "https://appdividend.com/2017/08/22/reactjs-tutorial-beginners-2017/"
+    }
+  ]
+}
