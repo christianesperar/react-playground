@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import { expect } from './../../setupChai';
-import Counter from './../../Pages/Counter';
+import Counter from './../../Pages/Counter/Counter';
 
 it('should render without crashing', () => {
   mount(<Counter />);

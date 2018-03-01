@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Description from './../Components/Description/Description';
+import Description from './../../Components/Description/Description';
 import './Counter.css';
 
 class Counter extends Component {

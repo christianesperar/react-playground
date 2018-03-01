@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Routes from './Config/Routes.json';
 import Header from './Components/Header/Header';
-import Home from './Pages/Home';
+import Home from './Pages/Home/Home';
 import './App.css';
 
 class App extends Component {
