@@ -18,10 +18,13 @@ class App extends Component {
     this.getPages(Routes.exercises);
 
     return (
-      <div className="rp">
-        <Header title="Welcome to React Playground" />
+      <Router>
+        <div className="rp">
+          <Header
+            title="<strong>React</strong> Playground"
+            description="My personal playground while learning <strong>React</strong>"
+          />
 
-        <Router>
           <div className="rp-container">
             <Route exact path="/" component={Home} />
             {Routes.exercises.map(route =>
@@ -34,8 +37,8 @@ class App extends Component {
               ))
             }
           </div>
-        </Router>
-      </div>
+        </div>
+      </Router>
     );
   }
 }
