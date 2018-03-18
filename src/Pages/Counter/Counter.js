@@ -15,14 +15,18 @@ class Counter extends Component {
   }
 
   add() {
+    const count = this.state.count + 1;
+
     this.setState({
-      count: this.state.count += 1,
+      count,
     });
   }
 
   subtract() {
+    const count = this.state.count - 1;
+
     this.setState({
-      count: this.state.count -= 1,
+      count,
     });
   }
 
