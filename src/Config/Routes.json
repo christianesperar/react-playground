@@ -5,6 +5,12 @@
       "url": "/counter",
       "component": "Counter",
       "path": "./Pages/Counter/Counter"
+    },
+    {
+      "title": "DOM vs Virtual DOM",
+      "url": "/virtual-dom-vs-dom",
+      "component": "VDD",
+      "path": "./Pages/VDD/VDD"
     }
   ],
   "tutorials": [
