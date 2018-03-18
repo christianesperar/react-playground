@@ -33,11 +33,11 @@ class Counter extends Component {
   render() {
     return (
       <div className="rp-counter">
-        <Description description="Counter" />
+        <Description header="Counter" />
 
-        <button onClick={this.add}>+</button>
-        <span>{this.state.count}</span>
-        <button onClick={this.subtract}>-</button>
+        <button className="rp-counter__button" onClick={this.add}>+</button>
+        <span className="rp-counter__counter">{this.state.count}</span>
+        <button className="rp-counter__button" onClick={this.subtract}>-</button>
       </div>
     );
   }

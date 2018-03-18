@@ -3,9 +3,16 @@ import { mount } from 'enzyme';
 import { expect } from './../../setupChai';
 import Description from './../../Components/Description/Description';
 
-it('should show the description', () => {
-  const wrapper = mount(<Description description="My personal playground while learning React" />);
-  const title = wrapper.find('p').text();
+it('should have correct element value', () => {
+  const wrapper = mount((
+    <Description
+      header="React Playground"
+      content="My personal playground while learning React"
+    />
+  ));
+  const header = wrapper.find('.rp-description__header').hostNodes().text();
+  const description = wrapper.find('.rp-description__content').hostNodes().text();
 
-  expect(title).to.equal('My personal playground while learning React');
+  expect(header).to.equal('React Playground');
+  expect(description).to.equal('My personal playground while learning React');
 });

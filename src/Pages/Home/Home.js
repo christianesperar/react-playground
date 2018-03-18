@@ -7,12 +7,10 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <Description description="My personal playground while learning React" />
-
-        <h2>Exercise</h2>
+        <Description header="Exercise" />
         <Contents routes={Routes.exercises} />
 
-        <h2>Tutorials</h2>
+        <Description header="Tutorials" />
         <Contents routes={Routes.tutorials} />
       </div>
     );

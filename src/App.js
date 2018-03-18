@@ -22,7 +22,7 @@ class App extends Component {
         <div className="rp">
           <Header
             title="<strong>React</strong> Playground"
-            description="My personal playground while learning <strong>React</strong>"
+            subtitle="My personal playground while learning <strong>React</strong>"
           />
 
           <div className="rp-container">

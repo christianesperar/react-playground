@@ -9,12 +9,12 @@ it('should have correct element value', () => {
     <MemoryRouter>
       <Header
         title="React Playground"
-        description="My personal playground while learning React"
+        subtitle="My personal playground while learning React"
       />
     </MemoryRouter>
   ));
-  const title = wrapper.find('h1').text();
-  const description = wrapper.find('span').text();
+  const title = wrapper.find('.rp-header__title').hostNodes().text();
+  const description = wrapper.find('.rp-header__subtitle').hostNodes().text();
 
   expect(title).to.equal('React Playground');
   expect(description).to.equal('My personal playground while learning React');
@@ -25,7 +25,7 @@ it('should render as HTML', () => {
     <MemoryRouter>
       <Header
         title="<strong>React</strong> Playground"
-        description="My personal playground while learning <strong>React</strong>"
+        subtitle="My personal playground while learning <strong>React</strong>"
       />
     </MemoryRouter>
   ));

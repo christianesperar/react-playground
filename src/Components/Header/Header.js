@@ -8,9 +8,18 @@ class Header extends Component {
     return (
       <header className="rp-header">
         <Link className="rp-header__link" to="/">
-          <img className="rp-header__logo" src={logo} alt="logo" />
-          <h1 className="rp-header__title" dangerouslySetInnerHTML={{ __html: this.props.title }} />
-          <span className="rp-header__subtitle" dangerouslySetInnerHTML={{ __html: this.props.description }} />
+          <img
+            className="rp-header__logo"
+            src={logo} alt="logo"
+          />
+          <h1
+            className="rp-header__title"
+            dangerouslySetInnerHTML={{ __html: this.props.title }}
+          />
+          <span
+            className="rp-header__subtitle"
+            dangerouslySetInnerHTML={{ __html: this.props.subtitle }}
+          />
         </Link>
       </header>
     );

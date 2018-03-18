@@ -20,7 +20,7 @@ it('should have the correct data if path', () => {
     </MemoryRouter>
   ));
 
-  const link = wrapper.find('li a');
+  const link = wrapper.find('.rp-contents__link').hostNodes();
 
   expect(link.text()).to.equal('Counter');
   expect(link.prop('href')).to.equal('/counter');
@@ -35,7 +35,7 @@ it('should have the correct data if href', () => {
   ];
 
   const wrapper = mount(<Contents routes={routes} />);
-  const link = wrapper.find('li a');
+  const link = wrapper.find('.rp-contents__link').hostNodes();
 
   expect(link.text()).to.equal('ReactJS Tutorial For Beginners 2017 From Scratch');
   expect(link.prop('href')).to.equal('https://appdividend.com/2017/08/22/reactjs-tutorial-beginners-2017/');
@@ -60,10 +60,11 @@ it('should have correct data for combined path and href', () => {
       <Contents routes={routes} />
     </MemoryRouter>
   ));
-  const path = wrapper.find('li a').at(0);
-  const link = wrapper.find('li a').at(1);
+  const links = wrapper.find('.rp-contents__link').hostNodes();
+  const path = links.at(0);
+  const link = links.at(1);
 
-  expect(wrapper.find('li a')).to.have.length(2);
+  expect(links).to.have.length(2);
 
   expect(path.text()).to.equal('Counter');
   expect(path.prop('href')).to.equal('/counter');

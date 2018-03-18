@@ -4,7 +4,10 @@ import './Description.css';
 class Description extends Component {
   render() {
     return (
-      <p className="rp-description">{this.props.description}</p>
+      <div className="rp-description">
+        <h2 className="rp-description__header">{this.props.header}</h2>
+        <p className="rp-description__content">{this.props.content}</p>
+      </div>
     );
   }
 }
