@@ -12,7 +12,7 @@ class Header extends Component {
             className="rp-header__logo"
             src={logo} alt="logo"
           />
-          <h1
+          <span
             className="rp-header__title"
             dangerouslySetInnerHTML={{ __html: this.props.title }}
           />

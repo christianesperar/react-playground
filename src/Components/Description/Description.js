@@ -5,8 +5,11 @@ class Description extends Component {
   render() {
     return (
       <div className="rp-description">
-        <h2 className="rp-description__header">{this.props.header}</h2>
-        <p className="rp-description__content">{this.props.content}</p>
+        <h1 className="rp-description__header">{this.props.header}</h1>
+        <p
+          className="rp-description__content"
+          dangerouslySetInnerHTML={{ __html: this.props.content}}>
+        </p>
       </div>
     );
   }
