@@ -30,5 +30,5 @@ it('should render as HTML', () => {
     </MemoryRouter>
   ));
 
-  expect(wrapper.html()).to.equal('<header class="rp-header"><a class="rp-header__link" href="/"><img class="rp-header__logo" src="logo.svg" alt="logo"><h1 class="rp-header__title"><strong>React</strong> Playground</h1><span class="rp-header__subtitle">My personal playground while learning <strong>React</strong></span></a></header>');
+  expect(wrapper.html()).to.equal('<header class="rp-header"><a class="rp-header__link" href="/"><img class="rp-header__logo" src="logo.svg" alt="logo"><span class="rp-header__title"><strong>React</strong> Playground</span><span class="rp-header__subtitle">My personal playground while learning <strong>React</strong></span></a></header>');
 });
