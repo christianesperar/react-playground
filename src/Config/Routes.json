@@ -22,5 +22,11 @@
       "title": "Testing React Component's State",
       "url": "https://medium.com/@newyork.anthonyng/testing-react-components-state-b57bfc712b90"
     }
+  ],
+  "courses": [
+    {
+      "title": "Introduction to ReactJS",
+      "url": "https://courses.edx.org/courses/course-v1:Microsoft+DEV281x+1T2018/course/"
+    }
   ]
 }

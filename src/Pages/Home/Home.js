@@ -11,6 +11,9 @@ function Home() {
 
       <Description header="Tutorials" />
       <Contents routes={Routes.tutorials} />
+
+      <Description header="Courses" />
+      <Contents routes={Routes.courses} />
     </div>
   );
 }
