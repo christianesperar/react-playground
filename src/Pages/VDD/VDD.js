@@ -35,11 +35,11 @@ class VDD extends Component {
       ReactDOM.render(virtualDOMHTML, document.getElementsByClassName('rp-counter__date--virtual-dom')[0]);
     };
 
-    this.state.domInterval = setInterval(renderDOMs, 1000);
+    this.domInterval = setInterval(renderDOMs, 1000);
   }
 
   componentWillUnmount() {
-    clearInterval(this.state.domInterval);
+    clearInterval(this.domInterval);
   }
 
   render() {
