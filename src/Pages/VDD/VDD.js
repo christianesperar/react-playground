@@ -54,8 +54,8 @@ class VDD extends Component {
 
         {!this.state.showLoading &&
           <div>
-            <div className="rp-counter__date--dom"></div>
-            <div className="rp-counter__date--virtual-dom"></div>
+            <div className="rp-counter__date--dom" />
+            <div className="rp-counter__date--virtual-dom" />
           </div>
         }
       </div>

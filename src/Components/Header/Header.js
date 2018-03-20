@@ -1,29 +1,28 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from './logo.svg';
 import './Header.css';
 
-class Header extends Component {
-  render() {
-    return (
-      <header className="rp-header">
-        <Link className="rp-header__link" to="/">
-          <img
-            className="rp-header__logo"
-            src={logo} alt="logo"
-          />
-          <span
-            className="rp-header__title"
-            dangerouslySetInnerHTML={{ __html: this.props.title }}
-          />
-          <span
-            className="rp-header__subtitle"
-            dangerouslySetInnerHTML={{ __html: this.props.subtitle }}
-          />
-        </Link>
-      </header>
-    );
-  }
+function Header(props) {
+  return (
+    <header className="rp-header">
+      <Link className="rp-header__link" to="/">
+        <img
+          className="rp-header__logo"
+          src={logo}
+          alt="logo"
+        />
+        <span
+          className="rp-header__title"
+          dangerouslySetInnerHTML={{ __html: props.title }}
+        />
+        <span
+          className="rp-header__subtitle"
+          dangerouslySetInnerHTML={{ __html: props.subtitle }}
+        />
+      </Link>
+    </header>
+  );
 }
 
 export default Header;
