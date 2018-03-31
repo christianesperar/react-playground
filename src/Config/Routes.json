@@ -26,7 +26,11 @@
   "courses": [
     {
       "title": "Introduction to ReactJS",
-      "url": "https://courses.edx.org/courses/course-v1:Microsoft+DEV281x+1T2018/course/"
+      "url": "https://courses.edx.org/courses/course-v1:Microsoft+DEV281x+1T2018/"
+    },
+    {
+      "title": "Modern React with Redux",
+      "url": "https://www.udemy.com/react-redux/"
     }
   ]
 }
